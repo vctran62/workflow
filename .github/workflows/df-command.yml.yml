@@ -1,0 +1,17 @@
+name: Run df Command
+
+on: 
+  push:
+    branches:
+      - main
+
+jobs:
+  run-df:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Run df command
+      run: df -h
